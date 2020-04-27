@@ -59,6 +59,9 @@ Datatype: xsd:string
     
 ObjectProperty: hasActedIn
 
+    Annotations: 
+        rdfs:comment "Defines the link between and actor and the movie he/she has worked in."@en
+    
     SubPropertyOf: 
         hasWorkedIn
     
@@ -68,6 +71,9 @@ ObjectProperty: hasActedIn
     
 ObjectProperty: hasDirected
 
+    Annotations: 
+        rdfs:comment "Defines the link between a director and the movie she/he has directed"@en
+    
     SubPropertyOf: 
         hasWorkedIn
     
@@ -77,6 +83,9 @@ ObjectProperty: hasDirected
     
 ObjectProperty: hasGenre
 
+    Annotations: 
+        rdfs:comment "Defines the link between a movie and a genre"@en
+    
     Domain: 
         Movie
     
@@ -86,6 +95,9 @@ ObjectProperty: hasGenre
     
 ObjectProperty: hasProduced
 
+    Annotations: 
+        rdfs:comment "Defines the link between a producer and a movie he/she has produced"@en
+    
     SubPropertyOf: 
         hasWorkedIn
     
@@ -95,6 +107,11 @@ ObjectProperty: hasProduced
     
 ObjectProperty: hasWorkedIn
 
+    Annotations: 
+        rdfs:comment "Design a superclass of objectProperties linking MovieWorkers to movies. It adds an abstraction layers to prevent to define \"Movie\" as being the range of each objectProperty describing a \"hasWorkedIn\" action (whether it is for acting, producing, directing etc...). 
+
+Hence, any sub property of this current property will inherit of this range, and will just have to provide the adequate domain."@en
+    
     SubPropertyOf: 
         owl:topObjectProperty
     
@@ -110,30 +127,45 @@ ObjectProperty: owl:topObjectProperty
     
 DataProperty: hasDuration
 
+    Annotations: 
+        rdfs:comment "Defines the duration of a movie"@en
+    
     Domain: 
         Movie
     
     
 DataProperty: hasImdbId
 
+    Annotations: 
+        rdfs:comment "Defines a IMDB ID of a movie. If a movie has an IMDB ID, it automatically also becomes a ImdbMovie"@en
+    
     Domain: 
         Movie
     
     
 DataProperty: hasReleaseYear
 
+    Annotations: 
+        rdfs:comment "Defines the release year of a movie"@en
+    
     Domain: 
         Movie
     
     
 DataProperty: hasTitle
 
+    Annotations: 
+        rdfs:comment "Defines the title of a movie"@en
+    
     Domain: 
         Movie
     
     
 DataProperty: hasTmdbId
 
+    Annotations: 
+        rdfs:comment "Defines the TMDB ID of a movie. If a movie has a TMDB ID, it automatically also becomes a TmdbMovie"@en
+    
     Domain: 
         Movie
     
