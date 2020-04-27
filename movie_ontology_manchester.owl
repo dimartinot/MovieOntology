@@ -1,0 +1,513 @@
+Prefix: : <http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#>
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: skos: <http://www.w3.org/2004/02/skos/core#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+
+Ontology: <http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd>
+
+
+Annotations: 
+    dc:contributor "Thomas Di Martino",
+    dc:creator "Thomas Di Martino",
+    dc:date 04.2020,
+    dc:description "Movie ontology for the CourseWork n°2 of F21BD - Heriot Watt"
+
+AnnotationProperty: dc:contributor
+
+    
+AnnotationProperty: dc:creator
+
+    
+AnnotationProperty: dc:date
+
+    
+AnnotationProperty: dc:description
+
+    
+AnnotationProperty: rdfs:comment
+
+    
+AnnotationProperty: rdfs:isDefinedBy
+
+    
+AnnotationProperty: rdfs:label
+
+    
+AnnotationProperty: skos:prefLabel
+
+    
+Datatype: rdf:PlainLiteral
+
+    
+Datatype: xsd:dateTime
+
+    
+Datatype: xsd:integer
+
+    
+Datatype: xsd:nonNegativeInteger
+
+    
+Datatype: xsd:string
+
+    
+ObjectProperty: hasActedIn
+
+    SubPropertyOf: 
+        hasWorkedIn
+    
+    Domain: 
+        Actor
+    
+    
+ObjectProperty: hasDirected
+
+    SubPropertyOf: 
+        hasWorkedIn
+    
+    Domain: 
+        Director
+    
+    
+ObjectProperty: hasGenre
+
+    Domain: 
+        Movie
+    
+    Range: 
+        Genre
+    
+    
+ObjectProperty: hasProduced
+
+    SubPropertyOf: 
+        hasWorkedIn
+    
+    Domain: 
+        Producer
+    
+    
+ObjectProperty: hasWorkedIn
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        MovieWorker
+    
+    Range: 
+        Movie
+    
+    
+ObjectProperty: owl:topObjectProperty
+
+    
+DataProperty: hasDuration
+
+    Domain: 
+        Movie
+    
+    
+DataProperty: hasImdbId
+
+    Domain: 
+        Movie
+    
+    
+DataProperty: hasReleaseYear
+
+    Domain: 
+        Movie
+    
+    
+DataProperty: hasTitle
+
+    Domain: 
+        Movie
+    
+    
+DataProperty: hasTmdbId
+
+    Domain: 
+        Movie
+    
+    
+Class: <http://xmlns.com/foaf/0.1/Person>
+
+    Annotations: 
+        rdfs:isDefinedBy "foaf:"
+    
+    SubClassOf: 
+        DomainThing
+    
+    
+Class: ActionGenre
+
+    Annotations: 
+        rdfs:comment "Movies defined by risk and stakes, with action-oriented content"@en
+    
+    SubClassOf: 
+        Genre
+    
+    
+Class: Actor
+
+    SubClassOf: 
+        MovieWorker
+    
+    
+Class: AnimationGenre
+
+    Annotations: 
+        rdfs:comment "Defined by inanimate objects being manipulated with the intention of making them appear as living things."@en
+    
+    SubClassOf: 
+        Genre
+    
+    
+Class: ComedyGenre
+
+    Annotations: 
+        rdfs:comment "Genre in which events and the way they are related are intended to induce laughter, disrigarding whether the story is macabre, zany, or simply amusing."@en
+    
+    SubClassOf: 
+        Genre
+    
+    
+Class: CrimeGenre
+
+    Annotations: 
+        rdfs:comment "Crime Genre displays interactions betwee the two sides of the criminal justice system, without focus on legislation, or civil suits."@en
+    
+    SubClassOf: 
+        Genre
+    
+    
+Class: Director
+
+    SubClassOf: 
+        MovieWorker
+    
+    
+Class: DomainThing
+
+    Annotations: 
+        rdfs:label "DomainThing"@en,
+        skos:prefLabel "Domain Thing"@en
+    
+    
+Class: DramaGenre
+
+    Annotations: 
+        rdfs:comment "Drama is defined by conflict. It aims at being as realistic as possible and distances itself from the usual sensationalism from other genres. Emotions are the main focus, by relying on intense situations."@en
+    
+    SubClassOf: 
+        Genre
+    
+    
+Class: ExperimentalGenre
+
+    Annotations: 
+        rdfs:comment "Experimental genre usually foregoes a cohesive narrative to, intentionally, be unfit for any other particular genre."@en
+    
+    SubClassOf: 
+        Genre
+    
+    
+Class: FantasyGenre
+
+    Annotations: 
+        rdfs:comment "Defined by setting its actions inside a fictional universe, with unrealistic outcomes and natural laws."@en
+    
+    SubClassOf: 
+        Genre
+    
+    
+Class: FeatureMovie
+
+    Annotations: 
+        rdfs:comment "Any movie long enough to be considered as the main featured movie on a television evening night. Rules on considering a movie to be a feature movie may differ, we chose to consider any movie more than 40min long to be a feature movie."@en
+    
+    EquivalentTo: 
+        Movie
+         and (hasDuration some xsd:nonNegativeInteger[> "40"^^xsd:nonNegativeInteger])
+    
+    SubClassOf: 
+        Movie
+    
+    DisjointWith: 
+        ShortMovie
+    
+    
+Class: Genre
+
+    Annotations: 
+        rdfs:comment "Defines the main categories of movies as classes. Specific subgenres can then be defined as individuals of these respective classes.
+
+These classes are NOT disjoint as a movie can be a mix of multiple genres (it is the case of the majority of movies)."@en
+    
+    SubClassOf: 
+        DomainThing
+    
+    
+Class: HistoricalGenre
+
+    Annotations: 
+        rdfs:comment "Historical Genre regroups both historically accurate movies with biographies and memoirs as well as fictional movies placed under a relatively accuracte depiction of a historical event."@en
+    
+    SubClassOf: 
+        Genre
+    
+    
+Class: HorrorGenre
+
+    Annotations: 
+        rdfs:comment "Centered upon terrific or macabre events for the thrill and the heart pumping feelings that the depicted terrible events may confer."@en
+    
+    SubClassOf: 
+        Genre
+    
+    
+Class: Movie
+
+    SubClassOf: 
+        DomainThing,
+        hasReleaseYear some xsd:dateTime,
+        hasTitle some xsd:string
+    
+    
+Class: MovieImdb
+
+    Annotations: 
+        rdfs:comment "Any movie registered as an Imdb movie (i.e. any movie entered with an imdb id)"@en
+    
+    EquivalentTo: 
+        Movie
+         and (hasImdbId some xsd:string)
+    
+    SubClassOf: 
+        Movie,
+        hasImdbId some xsd:string
+    
+    
+Class: MovieTmdb
+
+    Annotations: 
+        rdfs:comment "Any movie registered as being a Tmdb movie (i.e. any movie with a tmdb id)"@en
+    
+    EquivalentTo: 
+        Movie
+         and (hasTmdbId some xsd:string)
+    
+    SubClassOf: 
+        Movie,
+        hasTmdbId some xsd:string
+    
+    
+Class: MovieWorker
+
+    Annotations: 
+        rdfs:comment "Any Person working on a Movie is considered a Movie worker, from being on set to being responsible for the special effects."@en
+    
+    SubClassOf: 
+        <http://xmlns.com/foaf/0.1/Person>
+    
+    
+Class: OtherGenres
+
+    Annotations: 
+        rdfs:comment "Any genre that does not enter any other category"@en
+    
+    SubClassOf: 
+        Genre
+    
+    
+Class: Producer
+
+    SubClassOf: 
+        MovieWorker
+    
+    
+Class: RomanceGenre
+
+    Annotations: 
+        rdfs:comment "Defined by intimate relationships with, in some cases, darker twist to illustrate the natural conflicts linked to intimacy or love."@en
+    
+    SubClassOf: 
+        Genre
+    
+    
+Class: ScienceFictionGenre
+
+    Annotations: 
+        rdfs:comment "Defined by a mixture of fiction and science, hence its name, the SciFi genre tries to explain the unknown using technology and science, whereas Fantasy relies on magic and mysticism."@en
+    
+    SubClassOf: 
+        Genre
+    
+    
+Class: ShortMovie
+
+    Annotations: 
+        rdfs:comment "Any movie not long enough to be considered as the main featured movie on a television evening night. We chose to consider any movie less than 40min long to be a short movie."@en
+    
+    EquivalentTo: 
+        Movie
+         and (hasDuration some xsd:nonNegativeInteger[< "40"^^xsd:nonNegativeInteger])
+    
+    SubClassOf: 
+        Movie
+    
+    DisjointWith: 
+        FeatureMovie
+    
+    
+Class: ThrillerGenre
+
+    Annotations: 
+        rdfs:comment "Centered around the emotions, it tries to bring suspense and anxiety to the heart of the viewer."@en
+    
+    SubClassOf: 
+        Genre
+    
+    
+Class: User
+
+    SubClassOf: 
+        <http://xmlns.com/foaf/0.1/Person>
+    
+    
+Class: WesternGenre
+
+    Annotations: 
+        rdfs:comment "Defined by their setting and time period, western movies can take place in the American West, from Missouri to the Pacific Ocean. Usually set in the 19th century, they can display violence or non-violence."@en
+    
+    SubClassOf: 
+        Genre
+    
+    
+Individual: Absurdist
+
+    Types: 
+        ExperimentalGenre
+    
+    
+Individual: Action
+
+    Types: 
+        ActionGenre
+    
+    
+Individual: Biography
+
+    Types: 
+        HistoricalGenre
+    
+    
+Individual: Comedy
+
+    Types: 
+        ComedyGenre
+    
+    
+Individual: DarkFantasy
+
+    Types: 
+        FantasyGenre
+    
+    
+Individual: Ghost
+
+    Types: 
+        HorrorGenre
+    
+    
+Individual: Historical_Epic
+
+    Types: 
+        HistoricalGenre
+    
+    
+Individual: Horror
+
+    Types: 
+        HorrorGenre
+    
+    
+Individual: Musical
+
+    Types: 
+        OtherGenres
+    
+    
+Individual: Myth
+
+    Types: 
+        FantasyGenre
+    
+    
+Individual: Occult
+
+    Types: 
+        HorrorGenre
+    
+    
+Individual: PeriodRomance
+
+    Types: 
+        RomanceGenre
+    
+    
+Individual: TestActor1
+
+    Facts:  
+     hasActedIn  TestFeatureAction
+    
+    
+Individual: TestDirector1
+
+    Facts:  
+     hasDirected  TestMovieNoGenre
+    
+    
+Individual: TestFeatureAction
+
+    Facts:  
+     hasGenre  Action,
+     hasDuration  70,
+     hasImdbId  "a1b2c3d4",
+     hasReleaseYear  1995,
+     hasTitle  "TestFeatureAction"
+    
+    
+Individual: TestMovieNoGenre
+
+    
+Individual: TestShortHorrorComedy
+
+    Facts:  
+     hasGenre  Comedy,
+     hasGenre  Horror,
+     hasDuration  35,
+     hasReleaseYear  1998,
+     hasTitle  "TestShortHorrorComedy"
+    
+    
+Individual: Western
+
+    Types: 
+        WesternGenre
+    
+    
+Individual: WesternSpaghetti
+
+    Types: 
+        WesternGenre
+    
+    

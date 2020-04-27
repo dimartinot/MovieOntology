@@ -1,0 +1,743 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#"
+     xml:base="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd">
+        <dc:contributor>Thomas Di Martino</dc:contributor>
+        <dc:creator>Thomas Di Martino</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">04.2020</dc:date>
+        <dc:description>Movie ontology for the CourseWork n°2 of F21BD - Heriot Watt</dc:description>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#comment -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#comment"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#isDefinedBy -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#label -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#dateTime -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#integer -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#nonNegativeInteger -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#string -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#hasActedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#hasActedIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#hasWorkedIn"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Actor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#hasDirected -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#hasDirected">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#hasWorkedIn"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Director"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#hasGenre -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#hasGenre">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Movie"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Genre"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#hasProduced -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#hasProduced">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#hasWorkedIn"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Producer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#hasWorkedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#hasWorkedIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#MovieWorker"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Movie"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#hasDuration -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#hasDuration">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Movie"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#hasImdbId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#hasImdbId">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Movie"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#hasReleaseYear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#hasReleaseYear">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Movie"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#hasTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#hasTitle">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Movie"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#hasTmdbId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#hasTmdbId">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Movie"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#ActionGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#ActionGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Genre"/>
+        <rdfs:comment xml:lang="en">Movies defined by risk and stakes, with action-oriented content</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Actor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Actor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#MovieWorker"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#AnimationGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#AnimationGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Genre"/>
+        <rdfs:comment xml:lang="en">Defined by inanimate objects being manipulated with the intention of making them appear as living things.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#ComedyGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#ComedyGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Genre"/>
+        <rdfs:comment xml:lang="en">Genre in which events and the way they are related are intended to induce laughter, disrigarding whether the story is macabre, zany, or simply amusing.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#CrimeGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#CrimeGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Genre"/>
+        <rdfs:comment xml:lang="en">Crime Genre displays interactions betwee the two sides of the criminal justice system, without focus on legislation, or civil suits.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Director -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Director">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#MovieWorker"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#DomainThing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#DomainThing">
+        <rdfs:label xml:lang="en">DomainThing</rdfs:label>
+        <skos:prefLabel xml:lang="en">Domain Thing</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#DramaGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#DramaGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Genre"/>
+        <rdfs:comment xml:lang="en">Drama is defined by conflict. It aims at being as realistic as possible and distances itself from the usual sensationalism from other genres. Emotions are the main focus, by relying on intense situations.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#ExperimentalGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#ExperimentalGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Genre"/>
+        <rdfs:comment xml:lang="en">Experimental genre usually foregoes a cohesive narrative to, intentionally, be unfit for any other particular genre.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#FantasyGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#FantasyGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Genre"/>
+        <rdfs:comment xml:lang="en">Defined by setting its actions inside a fictional universe, with unrealistic outcomes and natural laws.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#FeatureMovie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#FeatureMovie">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Movie"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#hasDuration"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">40</xsd:minExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Movie"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#ShortMovie"/>
+        <rdfs:comment xml:lang="en">Any movie long enough to be considered as the main featured movie on a television evening night. Rules on considering a movie to be a feature movie may differ, we chose to consider any movie more than 40min long to be a feature movie.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Genre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Genre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#DomainThing"/>
+        <rdfs:comment xml:lang="en">Defines the main categories of movies as classes. Specific subgenres can then be defined as individuals of these respective classes.
+
+These classes are NOT disjoint as a movie can be a mix of multiple genres (it is the case of the majority of movies).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#HistoricalGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#HistoricalGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Genre"/>
+        <rdfs:comment xml:lang="en">Historical Genre regroups both historically accurate movies with biographies and memoirs as well as fictional movies placed under a relatively accuracte depiction of a historical event.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#HorrorGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#HorrorGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Genre"/>
+        <rdfs:comment xml:lang="en">Centered upon terrific or macabre events for the thrill and the heart pumping feelings that the depicted terrible events may confer.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Movie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Movie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#DomainThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#hasReleaseYear"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#hasTitle"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#MovieImdb -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#MovieImdb">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Movie"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#hasImdbId"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Movie"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#hasImdbId"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Any movie registered as an Imdb movie (i.e. any movie entered with an imdb id)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#MovieTmdb -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#MovieTmdb">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Movie"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#hasTmdbId"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Movie"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#hasTmdbId"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Any movie registered as being a Tmdb movie (i.e. any movie with a tmdb id)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#MovieWorker -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#MovieWorker">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:comment xml:lang="en">Any Person working on a Movie is considered a Movie worker, from being on set to being responsible for the special effects.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#OtherGenres -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#OtherGenres">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Genre"/>
+        <rdfs:comment xml:lang="en">Any genre that does not enter any other category</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Producer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Producer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#MovieWorker"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#RomanceGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#RomanceGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Genre"/>
+        <rdfs:comment xml:lang="en">Defined by intimate relationships with, in some cases, darker twist to illustrate the natural conflicts linked to intimacy or love.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#ScienceFictionGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#ScienceFictionGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Genre"/>
+        <rdfs:comment xml:lang="en">Defined by a mixture of fiction and science, hence its name, the SciFi genre tries to explain the unknown using technology and science, whereas Fantasy relies on magic and mysticism.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#ShortMovie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#ShortMovie">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Movie"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#hasDuration"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">40</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Movie"/>
+        <rdfs:comment xml:lang="en">Any movie not long enough to be considered as the main featured movie on a television evening night. We chose to consider any movie less than 40min long to be a short movie.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#ThrillerGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#ThrillerGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Genre"/>
+        <rdfs:comment xml:lang="en">Centered around the emotions, it tries to bring suspense and anxiety to the heart of the viewer.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#User -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#User">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#WesternGenre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#WesternGenre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Genre"/>
+        <rdfs:comment xml:lang="en">Defined by their setting and time period, western movies can take place in the American West, from Missouri to the Pacific Ocean. Usually set in the 19th century, they can display violence or non-violence.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#DomainThing"/>
+        <rdfs:isDefinedBy>foaf:</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Absurdist -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Absurdist">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#ExperimentalGenre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Action -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Action">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#ActionGenre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Biography -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Biography">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#HistoricalGenre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Comedy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Comedy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#ComedyGenre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#DarkFantasy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#DarkFantasy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#FantasyGenre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Ghost -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Ghost">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#HorrorGenre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Historical_Epic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Historical_Epic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#HistoricalGenre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Horror -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Horror">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#HorrorGenre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Musical -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Musical">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#OtherGenres"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Myth -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Myth">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#FantasyGenre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Occult -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Occult">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#HorrorGenre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#PeriodRomance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#PeriodRomance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#RomanceGenre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#TestActor1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#TestActor1">
+        <hasActedIn rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#TestFeatureAction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#TestDirector1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#TestDirector1">
+        <hasDirected rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#TestMovieNoGenre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#TestFeatureAction -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#TestFeatureAction">
+        <hasGenre rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Action"/>
+        <hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</hasDuration>
+        <hasImdbId>a1b2c3d4</hasImdbId>
+        <hasReleaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1995</hasReleaseYear>
+        <hasTitle>TestFeatureAction</hasTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#TestMovieNoGenre -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#TestMovieNoGenre"/>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#TestShortHorrorComedy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#TestShortHorrorComedy">
+        <hasGenre rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Comedy"/>
+        <hasGenre rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Horror"/>
+        <hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</hasDuration>
+        <hasReleaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1998</hasReleaseYear>
+        <hasTitle>TestShortHorrorComedy</hasTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Western -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#Western">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#WesternGenre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#WesternSpaghetti -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#WesternSpaghetti">
+        <rdf:type rdf:resource="http://www.semanticweb.org/thoma/ontologies/2020/3/f21bd#WesternGenre"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
